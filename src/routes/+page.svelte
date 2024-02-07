@@ -79,7 +79,7 @@
 				<div class="relative w-full md:w-[720px] mb-24 h-[350px] md:aspect-video bg-white shadow-md rounded-2xl md:overflow-clip" id="main">
 					{#key pages}
 						{#if opened && onPage('about')}
-							<div transition:fade class="absolute w-full h-full px-20 text-center mt-[45%] translate-y-[-50%]">
+							<div transition:fade class="absolute w-full h-full px-20 text-center mt-[35%] translate-y-[-50%]">
 								<h1 class="font-medium text-lg">
 								Hello my name is Josh! 👋
 								</h1>
