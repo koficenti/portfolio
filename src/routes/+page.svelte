@@ -32,14 +32,13 @@
 	});
 </script>
 
-<div class="h-screen overflow-clip">
+<div class="h-screen md:overflow-clip">
 	<div
-		class="flex justify-center place-items-center {opened
-			? 'h-[60vh]'
+		class="flex pt-20 justify-center place-items-center flex-col md:flex-row {opened
+			? 'h-full md:h-[60vh]'
 			: 'h-screen'} transition-all duration-500 gap-32"
 	>
 		<div class="flex flex-col gap-2">
-			<div class="py-14"></div>
 			<h1 class="px-1 text-2xl font-medium">Joshua Hunter</h1>
 			<h3 class="px-1 text-xl">Full Stack Developer</h3>
 			<div class="flex gap-3">
@@ -54,7 +53,7 @@
 		</div>
 		<div>
 			{#key pages}
-				<div class="flex justify-end gap-5 mb-5">
+				<div class="flex justify-center md:justify-end gap-5 mb-5">
 					<Button
 						on:click={() => selectPage('projects')}
 						text="Projects"
@@ -77,7 +76,7 @@
 						LessRound={true}
 					/>
 				</div>
-				<div class="relative w-[720px] aspect-video bg-white shadow-md rounded-2xl overflow-clip" id="main">
+				<div class="relative w-full md:w-[720px] mb-24 h-[350px] md:aspect-video bg-white shadow-md rounded-2xl md:overflow-clip" id="main">
 					{#key pages}
 						{#if opened && onPage('about')}
 							<div transition:fade class="absolute w-full h-full px-20 text-center mt-[45%] translate-y-[-50%]">
@@ -97,7 +96,7 @@
 								</div>
 							</div>
 						{:else}
-							<div>
+							<div class="">
 								<enhanced:img alt="Hero Section Image" src={Image} />
 							</div>
 						{/if}
